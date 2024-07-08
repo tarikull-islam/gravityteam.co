@@ -211,17 +211,24 @@ header {
 }
 /* ? Navigation for mobile devices */
 @media screen and (max-width: 768px) {
+  .nav {
+    padding: 1rem 0;
+  }
   .nav .nav-list {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    background: var(--gradient-background);
     top: 0;
     right: 100%;
     height: 100%;
-    width: 70%;
+    width: 100%;
     padding: 2rem 1rem;
     z-index: var(--z-fixed);
     transition: right linear 0.2s;
+  }
+  body.fly-menu .nav .nav-list {
+    right: 0;
   }
   .nav .nav-list .close-fly-menu,
   .nav .open-fly-menu {
@@ -260,8 +267,8 @@ header {
   position: absolute;
   padding: 1rem;
   top: 100%;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
   max-height: 0px;
   overflow: hidden;
   border-radius: 5px;
@@ -584,7 +591,7 @@ header {
   filter: blur(100px);
   left: -10%;
   bottom: 5%;
-  z-index: 1;
+  z-index: -1;
 }
 /* ! =============== BREAKPOINTS ===============*/
 /* ? For small devices */

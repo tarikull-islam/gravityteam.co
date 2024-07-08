@@ -1,3 +1,7 @@
+const collapseFlyMenu = () => {
+  document.body.classList.toggle("fly-menu");
+};
+
 const paginationSlider = document.querySelector(".pagination-slider .wrapper");
 const prevBtn = document.querySelector(".pagination-action .preview");
 const nextBtn = document.querySelector(".pagination-action .next");
