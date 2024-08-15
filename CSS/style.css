@@ -567,37 +567,6 @@ header {
   gap: 0.4rem;
   margin-top: 2rem;
 }
-
-/* ! BACKGROUND SHADOW  */
-.market-making .background-shadow-1,
-.market-making .background-shadow-2 {
-  position: absolute;
-  opacity: 0.6;
-}
-.market-making .background-shadow-1 {
-  width: 45rem;
-  height: 50rem;
-  background: rgb(99, 87, 227);
-  -webkit-filter: blur(70px);
-  filter: blur(70px);
-  bottom: 20%;
-  right: 20%;
-}
-.market-making .background-shadow-2 {
-  width: 10rem;
-  height: 10rem;
-  background: hsla(38, 54%, 61%, 1);
-  -webkit-filter: blur(100px);
-  filter: blur(100px);
-  left: -10%;
-  bottom: 5%;
-  z-index: -1;
-}
-/* ! =============== BREAKPOINTS ===============*/
-/* ? For small devices */
-
-/* ? For medium devices */
-
 @media screen and (min-width: 768px) {
   /* ! =============== HEADER & NAV ===============*/
   .nav .nav-list .close-fly-menu,
@@ -757,10 +726,13 @@ header {
     bottom: -110%;
   }
 }
-@media screen and (min-width: 992px) {
-}
-@media screen and (min-width: 1080px) {
-}
-@media screen and (min-width: 1400px) {
-}
 /* ? For large devices */
+
+/* ! TOP-BAR CSS */
+.top-bar {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+  text-transform: capitalize;
+  background: hsla(38, 54%, 61%, 1);
+}
