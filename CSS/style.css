@@ -27,6 +27,12 @@
     hsla(209, 73%, 64%, 1),
     hsla(245, 53%, 58%, 1)
   );
+  --gradient-background-reverse: linear-gradient(
+    -45deg,
+    hsla(245, 53%, 58%, 1),
+    hsla(209, 73%, 64%, 1),
+    hsla(38, 54%, 61%, 1)
+  );
   --radial-gradient-background: radial-gradient(
     hsla(209, 73%, 64%, 1),
     hsla(245, 53%, 58%, 1)
@@ -160,6 +166,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+section {
+  padding: 0 0.5rem;
+}
 /* * ========================= Re-Useable css class pre setup ==================================== */
 .container {
   max-width: 1440px;
@@ -169,13 +178,11 @@ img {
   padding: var(--button-padding);
   font-weight: var(--font-500);
   background: var(--gradient-button);
+  transition: all ease-in 0.3s;
+  cursor: pointer;
 }
-.btn:hover,
-a:hover {
-  background: var(--gradient-background);
-  background-clip: text;
-  color: transparent;
-  transition: 0.2s;
+.btn:hover {
+  background: var(--gradient-background-reverse);
 }
 .relative {
   position: relative;
@@ -207,12 +214,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 /* ? Navigation for mobile devices */
 @media screen and (max-width: 768px) {
   .nav {
-    padding: 1rem 0;
+    padding: 1rem;
   }
   .nav .nav-list {
     position: fixed;
@@ -238,8 +244,8 @@ header {
   .nav .nav-list .close-fly-menu {
     position: absolute;
     top: 0;
-    left: 0;
-    padding: 0.2rem 1rem;
+    right: 0;
+    padding: 1rem 2rem;
   }
 }
 
@@ -313,7 +319,7 @@ header {
 /* ! HOME SECTION STYLING*/
 .home {
   text-align: center;
-  padding: 3rem;
+  padding: 7rem 0 1rem;
 }
 .home p {
   margin-bottom: 2rem;
@@ -357,6 +363,7 @@ header {
 /* ! MARKET MAKING STYLING */
 .market-making {
   padding: 1rem;
+  overflow: hidden;
 }
 .market-making .container {
   display: flex;
@@ -404,6 +411,7 @@ header {
 /* ! PAGINATION SLIDER STYLING */
 .pagination-slider {
   padding: 1rem;
+  overflow: hidden;
 }
 .pagination-slider .container {
   display: flex;
@@ -539,10 +547,10 @@ header {
   border-top: 1px solid hsla(0, 0%, 100%, 0.25);
 }
 .footer .container {
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .footer .footer-wrapper {
-  padding: 3rem 0;
+  padding: 2rem 0 1rem;
 }
 .footer .footer-top {
   display: flex;
@@ -706,24 +714,6 @@ header {
   .footer .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
-  }
-  /* ! BACKGROUND SHADOW  */
-  .market-making .background-shadow-1 {
-    width: 15rem;
-    height: 28rem;
-    -webkit-filter: blur(75px);
-    filter: blur(75px);
-    bottom: -109%;
-    left: 20%;
-  }
-  .market-making .background-shadow-2 {
-    width: 10rem;
-    height: 10rem;
-    background: hsla(38, 54%, 61%, 1);
-    -webkit-filter: blur(66px);
-    filter: blur(66px);
-    left: 18%;
-    bottom: -110%;
   }
 }
 /* ? For large devices */
